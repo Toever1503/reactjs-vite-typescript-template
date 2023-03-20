@@ -23,7 +23,7 @@ export default function CounterPage() {
                 <Breadcrumb.Item>User</Breadcrumb.Item>
                 <Breadcrumb.Item>Bill</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{ padding: 24, minHeight: 360, }}>
+            <div className='text-red-500' style={{ padding: 24, minHeight: 360, }}>
                 Bill is a cat.
             </div>
             
