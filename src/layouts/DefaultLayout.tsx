@@ -5,7 +5,7 @@ export default function DefaultLayout({ }: any) {
         console.log('redirect dashboard');
     }
     return (
-        <div>
+        <div className="text-3xl text-red-500 font-bold underline">
             Default layout 12
         </div>
     )
