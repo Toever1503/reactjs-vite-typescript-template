@@ -1,3 +1,4 @@
+import { Breadcrumb, Button } from 'antd'
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../stores'
@@ -18,6 +19,14 @@ export default function CounterPage() {
 
     return (
         <div>
+            <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>User</Breadcrumb.Item>
+                <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            </Breadcrumb>
+            <div style={{ padding: 24, minHeight: 360, }}>
+                Bill is a cat.
+            </div>
+            
             <div>
                 <button
                     aria-label="Increment value"
@@ -33,9 +42,9 @@ export default function CounterPage() {
                     Decrement
                 </button>
             </div>
-            <button onClick={counterStatus}>
+            <Button type='primary' onClick={counterStatus} >
                 Counter Status
-            </button>
+            </Button>
         </div>
     )
 }

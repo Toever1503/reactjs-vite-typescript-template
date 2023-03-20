@@ -9,7 +9,7 @@ const router = createBrowserRouter([
         children: [
             {
               path: "/contacts",
-              element: <div>Hello world!</div>,
+              element: <CounterPage />,
             },
           ],
     },

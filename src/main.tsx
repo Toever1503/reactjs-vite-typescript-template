@@ -7,7 +7,7 @@ import router from './routes';
 import { Provider } from 'react-redux'
 import './index.css'
 import { store } from './stores';
-
+import 'antd/dist/reset.css';
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
