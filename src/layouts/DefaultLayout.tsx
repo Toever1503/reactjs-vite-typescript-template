@@ -6,6 +6,7 @@ import {
 import type { MenuProps } from 'antd';
 import { Layout, Menu, theme } from 'antd';
 import { Outlet } from 'react-router-dom';
+import { DashboardOutlined } from '@ant-design/icons/lib/icons';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -27,6 +28,7 @@ function getItem(
 }
 
 const items: MenuItem[] = [
+    getItem('Dashboard', 'dashboard', <DashboardOutlined />),
     getItem('User', 'parent-users', <UserOutlined />, [
         getItem('All Users', 'users'),
         getItem('Add new', 'user-add'),
@@ -63,7 +65,7 @@ const App: React.FC = () => {
                 <div style={{ height: 64, boxShadow: '0 1px 9px -3px rgba(0,0,0,.2)', zIndex: 1, position: 'relative' }} >
                     My APP
                 </div>
-                <Menu defaultSelectedKeys={['1']} mode="inline" items={items} />
+                <Menu onSelect={onMenuClick} triggerSubMenuAction='click' defaultSelectedKeys={['1']} mode="inline" items={items} />
             </Sider>
 
             <Layout className="site-layout">
