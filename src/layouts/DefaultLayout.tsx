@@ -1,12 +1,12 @@
 import { Outlet, useRoutes } from "react-router-dom";
+import TheHeader from "../components/TheHeader";
 
-export default function DefaultLayout({ }: any) {
-    if (window.location.pathname === "/") {
-        console.log('redirect dashboard');
-    }
+export default function DefaultLayout(props: any) {
+
     return (
-        <div>
-            Default layout 12
-        </div>
+        <>
+            <TheHeader />
+            <Outlet />
+        </>
     )
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../stores'
 import { decrement, increment } from '../../stores/features/counter/counterSlice'
+import { Card, CardHeader, CardBody, Text } from '@chakra-ui/react'
 
 export default function CounterPage() {
     const counter = useSelector((state: RootState) => state.counter)
@@ -36,6 +37,12 @@ export default function CounterPage() {
             <button onClick={counterStatus}>
                 Counter Status
             </button>
+
+            <Card>
+                <CardBody>
+                    <Text>View a summary of all your customers over the last month.</Text>
+                </CardBody>
+            </Card>
         </div>
     )
 }

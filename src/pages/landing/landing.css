@@ -1,0 +1,176 @@
+.landing_body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/landing/bg-fill-desktop.png");
+    background-size: cover;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.landing_body .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: black;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.landing_body .clould-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: moveLeftToRight 20s linear infinite;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.landing_body .bg_clould_desktop {
+    max-width: 1800px;
+    max-height: 350px;
+}
+
+.landing_body .bg_building_desktop {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.icon-location,
+.icon-location-mobile {
+    max-width: 66px;
+    max-height: 104px;
+    cursor: pointer;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .icon-location,
+    .icon-location-mobile {
+        scale: 0.8;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+
+    .icon-location,
+    .icon-location-mobile {
+        scale: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html,
+    body,
+    #root {
+        height: 2100px !important;
+    }
+}
+
+.icon-location {
+    position: absolute;
+    z-index: 99;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust the distance as needed */
+    }
+}
+
+
+.bg_building_mobile {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: auto;
+}
+
+.icon-location-mobile {
+    max-width: 40px;
+    max-height: 73px;
+    z-index: 3;
+}
+
+.icon-location-mobile.list {
+    position: absolute;
+    top: 12%;
+    left: 77%;
+}
+
+.icon-location-mobile.hub {
+    position: absolute;
+    top: 15.5%;
+    left: 21%;
+}
+
+.icon-location-mobile.marketplace {
+    position: absolute;
+    top: 32%;
+    left: 66%;
+}
+
+.icon-location-mobile.swap {
+    position: absolute;
+    top: 41%;
+    left: 30%;
+}
+
+.icon-location-mobile.game {
+    position: absolute;
+    top: 44.5%;
+    left: 70%;
+}
+
+.icon-location-mobile.docs {
+    position: absolute;
+    top: 56%;
+    left: 18%;
+}
+
+.icon-location-mobile.sniper {
+    position: absolute;
+    top: 64.3%;
+    left: 62%;
+}
+
+.icon-location-mobile.staking {
+    position: absolute;
+    top: 77.5%;
+    left: 45%;
+}
